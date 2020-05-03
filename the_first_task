@@ -1,0 +1,38 @@
+def multiple_of_three(numbers):
+    """
+    multiple_of_three - эта функция ищет числа кратные трем (3)
+    :param numbers: этот параметр принимает число, которое мы будем итерировать.
+    :return: функция возвращает list чисел которые кратны трем от 1 - numbers
+    """
+    count = []
+    for num in range(numbers):
+        if num % 3 == 0:
+            count.append(num)
+    return count
+
+def multiple_of_five(numbers):
+    """
+    multiple_of_five - эта функция ищет числа кратные пяти (5)
+    :param numbers: этот параметр принимает число, которое мы будем итерировать.
+    :return: функция возвращает list чисел которые кратны трем от 1 - numbers
+    """
+    count = []
+    for num in range(numbers):
+        if num % 5 == 0:
+            count.append(num)
+    return count
+
+def sum_multiple(number):
+    """
+    sum_multiple - эта функция принимает число, которое надо будет проитерировать.
+    Псоел чего будет получена сумма чисел кратных трем и пяти.
+    :param number: число, которое требуется проитерировать.
+    :return: функция возращает сумму чисел кратных трем и пяти в диапазоне от 1 - number.
+    """
+    sum_five = 0
+    sum_tree = 0
+    for num in multiple_of_three(number):
+        sum_tree += num
+    for num in multiple_of_five(number):
+        sum_five += num
+    return sum_five + sum_tree
